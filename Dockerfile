@@ -22,6 +22,9 @@ COPY supervisord.conf /etc/supervisord.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
-VOLUME ["/app", "/logs"]
 CMD ["/usr/bin/supervisord", "-l", "/logs/supervisord.log", "-j", "/var/run/supervisord.pid"]
 WORKDIR /app
+
+# Folders to mount in rw :
+#   - /app
+#   - /logs
