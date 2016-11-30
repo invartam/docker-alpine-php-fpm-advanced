@@ -13,10 +13,8 @@ RUN apk update \
     && apk del libxml2-dev libjpeg-turbo-dev zlib-dev libpng-dev \
         libmcrypt-dev openssl-dev curl-dev libxslt-dev sqlite-dev
 
-RUN apk add nginx supervisor \
+RUN apk add nginx supervisor libxslt libmcrypt libpng \
     && mkdir /app /logs /run/nginx
-
-#libjpeg-turbo libmcrypt libpng libxslt sqlite-libs libgcrypt libgpg-error
 
 COPY supervisord.conf /etc/supervisord.conf
 COPY nginx.conf /etc/nginx/nginx.conf
