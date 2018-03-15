@@ -6,7 +6,7 @@ RUN apk update \
     && docker-php-ext-install mysqli \
 #                              sqlite3 \
                               pdo_mysql \
-                              mcrypt \
+#                              mcrypt \
                               gd \
                               zip \
                               xsl \
