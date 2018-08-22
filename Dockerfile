@@ -17,7 +17,7 @@ RUN apk update \
         libmcrypt-dev openssl-dev curl-dev libxslt-dev sqlite-dev \
         imagemagick-dev g++ autoconf m4 make
 
-RUN apk add nginx supervisor libxslt libmcrypt libpng \
+RUN apk add nginx supervisor libxslt libmcrypt libpng imagemagick \
     && mkdir /app /logs /run/nginx
 
 COPY supervisord.conf /etc/supervisord.conf
