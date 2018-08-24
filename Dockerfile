@@ -2,7 +2,7 @@ FROM php:fpm-alpine
 
 RUN apk update \
     && apk add libxml2-dev libjpeg-turbo-dev zlib-dev libpng-dev \
-        libmcrypt-dev openssl-dev curl-dev libxslt-dev sqlite-dev \
+        libmcrypt-dev openssl-dev libxslt-dev sqlite-dev \
         imagemagick-dev g++ autoconf m4 make\
     && docker-php-ext-install mysqli \
                               pdo_mysql \
