@@ -6,7 +6,6 @@ RUN apk update \
         imagemagick-dev g++ autoconf m4 make\
     && docker-php-ext-install mysqli \
                               pdo_mysql \
-			                  mbstring \
                               bcmath \
                               gd \
                               zip \
